@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #4B3F4E;
+
+  & div:first-child {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #fff;
+    font-size: 20px;
+
+    & span:last-child {
+      font-weight: 600;
+    }
+  }
+
+  & div:last-child {
+    width: 5%;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    cursor: pointer;
+    color: #fff;
+  }
+}
