@@ -10,7 +10,7 @@ import { Header } from '../../components/Header/Header';
 const FPS = () => {
   return (
     <>
-      <Header titleCategory='First-Person Shooters' description='' />
+      <Header titleCategory='First-Person Shooters' description='Os jogos FPS são exatamente o que o nome descreve: jogos em que a visão do personagem é em primeira pessoa e a mesma do jogador, para maior imersão.' />
       <section>
         <div className={styles.container}>
           <CardDetail image={counterStrike} price='Free to play' titleCard='Counter-Strike Global Offensive' descriptionCard='O Counter-Strike: Global Offensive (CS:GO) melhora a jogabilidade de ação baseada em equipes na qual foi pioneiro quando lançado há 19 anos.' />

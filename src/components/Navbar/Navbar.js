@@ -14,7 +14,8 @@ export const Navbar = () => {
         </ul>
         <div className={styles.input}>
           <input type="text" placeholder='O que você procura ?'/>
-          <Link to={'/carrinho'}><AiOutlineShoppingCart className={styles.icon} color='white' size={35}/></Link>
+          
+          <Link to={'/carrinho'}><AiOutlineShoppingCart className={styles.icon} size={35}/></Link>
         </div>
     </nav>
   )
