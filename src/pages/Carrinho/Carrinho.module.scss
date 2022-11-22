@@ -1,8 +1,8 @@
 .container {
     max-width: 100%;
     min-height: 23.5vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
 
     .item2 {
         display: flex;
@@ -16,7 +16,7 @@
             align-items: center;
             justify-content: space-between;
             height: 50px;
-            width: 80%;
+            width: 40%;
             background-color: #4b3f4e;
             padding: 0 40px;
             color: white;

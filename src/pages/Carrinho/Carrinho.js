@@ -9,7 +9,9 @@ const Carrinho = () => {
 				description={"Todos os jogos com 10% de desconto"}
 			/>
 			<div className={styles.container}>
-				<div className={styles.item1}></div>
+				<div className={styles.item1}>
+
+				</div>
 				<div className={styles.item2}>
 					<div className={styles.divResumo}>
 						<span className={styles.bold}>Resumo da compra</span>
