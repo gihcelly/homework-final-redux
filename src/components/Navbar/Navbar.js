@@ -8,13 +8,13 @@ export const Navbar = () => {
   return (
 
     <nav className= {styles.container }>
-        <Link><img src={img}></img></Link>
+        <Link to={'/'}><img src={img} alt='Brand Icon'></img></Link>
         <ul>
-          <Link>Pagina inicial</Link>
+          <Link to={'/'}>Pagina inicial</Link>
         </ul>
         <div className={styles.input}>
           <input type="text" placeholder='O que você procura ?'/>
-          <Link><AiOutlineShoppingCart className={styles.icon} color='white' size={35}/></Link>
+          <Link to={'/carrinho'}><AiOutlineShoppingCart className={styles.icon} color='white' size={35}/></Link>
         </div>
     </nav>
   )

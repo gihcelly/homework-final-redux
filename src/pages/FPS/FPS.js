@@ -5,9 +5,12 @@ import counterStrike from '../../assets/img-cards/counter-strike.jpg';
 import valorant from '../../assets/img-cards/valorant.jpg';
 import rainbowSix from '../../assets/img-cards/rainbow-six.jpg';
 
+import { Header } from '../../components/Header/Header';
+
 const FPS = () => {
   return (
     <>
+      <Header titleCategory='First-Person Shooters' description='' />
       <section>
         <div className={styles.container}>
           <CardDetail image={counterStrike} price='Free to play' titleCard='Counter-Strike Global Offensive' descriptionCard='O Counter-Strike: Global Offensive (CS:GO) melhora a jogabilidade de ação baseada em equipes na qual foi pioneiro quando lançado há 19 anos.' />

@@ -5,8 +5,8 @@ export const Header = ({titleCategory, description}) => {
   return (
     <div className={styles.bg}>
 
-          <h1>teste</h1>
-          <h4>teste</h4>
+          <h1>{titleCategory}</h1>
+          <h4>{description}</h4>
     </div>
   )
 }
