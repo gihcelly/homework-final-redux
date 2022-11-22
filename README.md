@@ -12,7 +12,7 @@
 ## Documentação do projeto:
 
 ### Etapa 01
-- Nessa estapa inicial foi criada toda a estrutura inicial do projeto, o layout das páginas e as rotas, o Redux também foi estruturado para entrada das funcionalidades, dependencias e pastas foram inseridas no projeto nesta etapa.
+- Nessa etapa foi criada toda a estrutura inicial do projeto, o layout das páginas e as rotas, o Redux também foi estruturado para entrada das funcionalidades, dependências e pastas foram inseridas no projeto nesta etapa.
 
 ![Inicial](https://i.imgur.com/dJ6OcCP.png)
 
