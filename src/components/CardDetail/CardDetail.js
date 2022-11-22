@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './CardDetail.module.scss';
 
 import { FaCartPlus } from 'react-icons/fa';
@@ -20,7 +21,7 @@ const CardDetail = ({ image, price, titleCard, descriptionCard }) => {
           </div>
           <div className={styles.icons}>
             <AiOutlineHeart />
-            <FaCartPlus />
+            <Link to={'/carrinho'}><FaCartPlus /></Link> 
           </div>
         </div>
       </div>

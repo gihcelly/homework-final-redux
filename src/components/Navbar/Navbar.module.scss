@@ -36,5 +36,11 @@ nav {
             padding: 0 20px;
             border: none;
         }
+
+        input:focus {
+            box-shadow: 0 0 0 0;
+            border: 1px solid rgb(168, 163, 163);
+            outline: 0;
+        }
     }
 }
