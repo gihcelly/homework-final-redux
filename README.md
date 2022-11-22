@@ -19,3 +19,7 @@
 ![Categoria](https://i.imgur.com/wiPFndF.png)
 
 ![Carrinho](https://i.imgur.com/I3Vvq9F.png)
+
+### Etapa 02
+- Aqui começamos a utilizar o Redux, criando dois reducers para os cards da página Home e das páginas de categorias, esses reducers deixam os cards dinâmicos, agora podemos gerenciar os estados desses components e adicionar lógica a eles.
+- Foi adicionado a feature de favoritar um item.

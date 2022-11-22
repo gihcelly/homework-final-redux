@@ -1,10 +1,19 @@
-import { Link } from 'react-router-dom';
 import styles from './CardDetail.module.scss';
 
 import { FaCartPlus } from 'react-icons/fa';
-import { AiOutlineHeart } from 'react-icons/ai'
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 
-const CardDetail = ({ image, price, titleCard, descriptionCard }) => {
+import { changeFavorite } from '../../app/reducers/cardDetail';
+import { useDispatch, useSelector } from 'react-redux';
+
+export default function CardDetail (props) {
+  const { titleCard, descriptionCard, price, image, id, favorite, cart, qtd } = props
+  
+  const dispatch = useDispatch();
+  // const inCart = useSelector(state => state.cart.some(itemInCart => itemInCart.id === id));
+
+  const handleFavorite = () => dispatch(changeFavorite(id));
+
   return (
     <>
       <div className={styles.container}>
@@ -20,13 +29,14 @@ const CardDetail = ({ image, price, titleCard, descriptionCard }) => {
             <span>R$ <span className={styles.price}>{price}</span></span>
           </div>
           <div className={styles.icons}>
-            <AiOutlineHeart />
-            <Link to={'/carrinho'}><FaCartPlus /></Link> 
+            {favorite
+              ? <AiFillHeart color='#ff0000' onClick={handleFavorite} />
+              : <AiOutlineHeart onClick={handleFavorite} />
+            }
+            <FaCartPlus />
           </div>
         </div>
       </div>
     </>
   )
 }
-
-export default CardDetail

@@ -1,5 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-export default configureStore({
-    reducer: {}
+import itens from './reducers/cardDetail';
+
+const store = configureStore({
+    reducer: {
+
+        allItens: itens
+    }
 });
+
+export default store;
