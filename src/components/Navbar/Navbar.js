@@ -6,17 +6,15 @@ import {AiOutlineShoppingCart} from 'react-icons/ai'
 
 export const Navbar = () => {
   return (
-
     <nav className= {styles.container }>
-        <Link to={'/'}><img src={img} alt='Brand Icon'></img></Link>
-        <ul>
-          <Link to={'/'}>Pagina inicial</Link>
-        </ul>
-        <div className={styles.input}>
-          <input type="text" placeholder='O que você procura ?'/>
-          
-          <Link to={'/carrinho'}><AiOutlineShoppingCart className={styles.icon} size={35}/></Link>
-        </div>
+      <Link to={'/'}><img src={img} alt='Brand Icon'></img></Link>
+      <ul>
+        <Link to={'/'}>Pagina inicial</Link>
+      </ul>
+      <div className={styles.input}>
+        <input type="text" placeholder='O que você procura?'/>  
+        <Link to={'/carrinho'}><AiOutlineShoppingCart className={styles.icon} size={35}/></Link>
+      </div>
     </nav>
   )
 }
