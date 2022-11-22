@@ -1,0 +1,43 @@
+.container {
+    max-width: 100%;
+    min-height: 23.5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .item2 {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        max-width: 100%;
+        padding: 40px 70px;
+
+        .divResumo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            width: 80%;
+            background-color: #4b3f4e;
+            padding: 0 40px;
+            color: white;
+
+            .bold {
+                font-weight: 700;
+            }
+        }
+
+        button {
+            height: 50px;
+            background-color: black;
+            color: white;
+            margin-top: 30px;
+            border-radius: 25px;
+            padding: 10px 30px;
+            font-size: 1.125rem;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
