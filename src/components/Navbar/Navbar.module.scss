@@ -39,5 +39,11 @@ nav {
 		.icon:hover {
 			color: rgba(255, 255, 255, 0.596);
 		}
+
+        input:focus {
+            box-shadow: 0 0 0 0;
+            border: 1px solid rgb(168, 163, 163);
+            outline: 0;
+        }
 	}
 }
