@@ -20,30 +20,55 @@ nav {
 
 		&:hover {
 			color: rgba(255, 255, 255, 0.596);
+			text-decoration: underline;
 		}
 	}
 	.input {
 		display: flex;
 		gap: 20px;
-		justify-content: space-between;
+		justify-content: center;
 		width: 100%;
 
+		.input:focus {
+			box-shadow: 0 0 0 0;
+			border: 1px solid rgb(168, 163, 163);
+			outline: 0;
+		}
+
+		.search {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #fff;
+			padding-right: 15px;
+			border-radius: 10px;
+			gap: 10px;
+
+			svg {
+				cursor: pointer;
+
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+			
+			input:focus {
+				box-shadow: 0 0 0 0;
+				border: none;
+				outline: 0;
+			}
+		}
+
 		input {
-			width: 100%;
+			width: 300px;
 			height: 40px;
 			border-radius: 10px;
-			padding: 0 20px;
+			padding-left: 15px;
 			border: none;
 		}
 
 		.icon:hover {
 			color: rgba(255, 255, 255, 0.596);
 		}
-
-        input:focus {
-            box-shadow: 0 0 0 0;
-            border: 1px solid rgb(168, 163, 163);
-            outline: 0;
-        }
 	}
 }
