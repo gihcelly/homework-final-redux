@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import categoriasSlice from "./reducers/cardCategoria";
+import categoriesSlice from "./reducers/cardCategoria";
 import itens from './reducers/cardDetail';
 
 const store = configureStore({
 	reducer: {
-		categorias: categoriasSlice,
-        allItens: itens
+		categories: categoriesSlice,
+    allItens: itens
 	}
 });
 

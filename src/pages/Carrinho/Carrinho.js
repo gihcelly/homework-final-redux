@@ -10,7 +10,6 @@ const Carrinho = () => {
 			/>
 			<div className={styles.container}>
 				<div className={styles.item1}>
-
 				</div>
 				<div className={styles.item2}>
 					<div className={styles.divResumo}>

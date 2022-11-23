@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Navbar.module.scss';
 import img from '../../assets/brand.png';
 import { Link } from 'react-router-dom';
