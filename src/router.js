@@ -14,6 +14,7 @@ import RPG from "./pages/RPG/RPG";
 import Carrinho from "./pages/Carrinho/Carrinho";
 import Moba from "./pages/Moba/Moba";
 import Simulacao from "./pages/Simulacao/Simulacao";
+import { FinalizarCompra } from "./pages/FinalizarCompra/FinalizarCompra";
 
 function AppRouter() {
 	return (
@@ -29,6 +30,7 @@ function AppRouter() {
 						<Route path="/categoria/moba" element={<Moba />} />
 						<Route path="/categoria/simulacao" element={<Simulacao />} />
 						<Route path="/carrinho" element={<Carrinho />} />
+						<Route path="/finalizar-compra" element={<FinalizarCompra />} />
 					</Routes>
 					<Footer />
 				</Provider>

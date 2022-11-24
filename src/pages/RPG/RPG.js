@@ -9,11 +9,13 @@ import { useSelector } from 'react-redux';
 const RPG = () => {
   const { pathname } = useLocation();
   const { allItens } = useSelector(state => {
+    const regexp = new RegExp(state.search, 'i');
     return {
-      allItens: state.allItens.filter(item => item.category === pathname)
+      category: state.categories.find(category  => category.id === pathname),
+      allItens: state.allItens.filter(item => item.category === pathname && item.titleCard.match(regexp))
     }
   });
-
+  
   return (
     <>
       <Header titleCategory='Role Playing Game' description='Role-playing game, também conhecido como RPG, é um tipo de jogo em que os jogadores assumem papéis de personagens e criam narrativas colaborativamente.' />

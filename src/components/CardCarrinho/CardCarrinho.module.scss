@@ -33,14 +33,25 @@
           text-align: justify;
           padding: 30px 0;
       }
+
+      div {
+        display: flex;
+        flex-direction: column;
+      }
   }
 
   .cardActions {
+        width: 20%;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: flex-end;
       flex-direction: column;
+
+      .qtd {
+       
+        text-align: center;
+      }
       
       div {
           display: flex;

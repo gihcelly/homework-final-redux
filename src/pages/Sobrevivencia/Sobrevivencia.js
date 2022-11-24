@@ -9,8 +9,10 @@ import { useSelector } from 'react-redux';
 const Sobrevivencia = () => {
   const { pathname } = useLocation();
   const { allItens } = useSelector(state => {
+    const regexp = new RegExp(state.search, 'i');
     return {
-      allItens: state.allItens.filter(item => item.category === pathname)
+      category: state.categories.find(category  => category.id === pathname),
+      allItens: state.allItens.filter(item => item.category === pathname && item.titleCard.match(regexp))
     }
   });
 
