@@ -37,14 +37,15 @@ const CardCarrinho = (props) => {
 							? <span>R$ <strong>{price}</strong> - Unidade</span> 
 							: <span>R$ <strong>{total.toFixed(2)}</strong></span>
 						}
-						{favorite
-							? <AiFillHeart size={20} color='#ff0000' onClick={() => dispatch(changeFavorite(id))} />
-							: <AiOutlineHeart size={20} onClick={() => dispatch(changeFavorite(id))} />
+						{pathname === '/carrinho' ? favorite
+								? <AiFillHeart size={20} color='#ff0000' onClick={() => dispatch(changeFavorite(id))} />
+								: <AiOutlineHeart size={20} onClick={() => dispatch(changeFavorite(id))} />
+							: ''
 						}
           </div>
 				</div>
 				<div className={styles.cardActions}>
-					<div><i><TiDelete size={30} onClick={() => dispatch(changeCart(id))} /></i></div>
+					{pathname === '/carrinho' && <div><i><TiDelete size={30} onClick={() => dispatch(changeCart(id))} /></i></div>}
 					<span>Tipo: <strong>Jogo</strong></span>
 					<span className={styles.qtdSpan}>Quantidade:</span>
 					{pathname === "/carrinho" ? (
