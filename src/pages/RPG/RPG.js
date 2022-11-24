@@ -19,8 +19,10 @@ const RPG = () => {
       <Header titleCategory='Role Playing Game' description='Role-playing game, também conhecido como RPG, é um tipo de jogo em que os jogadores assumem papéis de personagens e criam narrativas colaborativamente.' />
       <section>
         <div className={styles.container}>
-          {allItens?.map((item) => (
-            <CardDetail key={item.id} {...item} />
+          {allItens?.map(item => (
+            <div className={styles.effect}>
+              <CardDetail key={item.id} {...item} />
+            </div>
           ))}
         </div>
       </section>

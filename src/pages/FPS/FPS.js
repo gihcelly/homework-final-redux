@@ -20,7 +20,9 @@ const FPS = () => {
       <section>
         <div className={styles.container}>
           {allItens?.map(item => (
-            <CardDetail key={item.id} {...item} />
+            <div className={styles.effect}>
+              <CardDetail key={item.id} {...item} />
+            </div>
           ))}
         </div>
       </section>

@@ -22,3 +22,13 @@
         }
     }
 }
+
+.cardesContainer {
+    transition: 0.3s;
+}
+  
+.container:has(.cardesContainer:hover) .cardesContainer:not(:hover) {
+transition: 0.3s;
+opacity: .8;
+scale: .95;
+}

@@ -1,12 +1,15 @@
 import styles from './CardCarrinho.module.scss';
 
-import { changeQtd } from '../../app/reducers/cartReducer';
+import { changeFavorite } from '../../app/reducers/cardDetail';
+import { changeQtd, changeCart } from '../../app/reducers/cartReducer';
 import { useDispatch } from "react-redux";
 
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { CiSquarePlus, CiSquareMinus } from 'react-icons/ci'
+import { TiDelete } from 'react-icons/ti';
 
 const CardCarrinho = (props) => {
-  const { titleCard, descriptionCard, price, image, id, qtd } = props;
+  const { titleCard, descriptionCard, price, image, favorite, id, qtd } = props;
   const dispatch = useDispatch();
 
   return (
@@ -18,18 +21,25 @@ const CardCarrinho = (props) => {
         <div className={styles.cardBody}>
           <h1>{titleCard}</h1>
           <p>{descriptionCard}</p>
-          <span>R$ <strong>{price}</strong></span>
+          <div>
+            <span>R$ <strong>{price}</strong></span>
+            {favorite
+              ? <AiFillHeart size={20} color='#ff0000' onClick={() => dispatch(changeFavorite(id))} />
+              : <AiOutlineHeart size={20} onClick={() => dispatch(changeFavorite(id))} />
+            }
+          </div>
         </div>
         <div className={styles.cardActions}>
-          <span>Quantidade:</span>
           <div>
-            
+            <i><TiDelete size={30} onClick={() => dispatch(changeCart(id))} /></i>
+          </div>
+          <div>
             <i><CiSquarePlus size={30} onClick={() => dispatch(changeQtd({ id, qtd: + 1 }))} /></i>
             <span>{String(qtd || 0).padStart(2, '0')}</span>
             <i><CiSquareMinus size={30} onClick={() => {
               if(qtd === 1) return
               dispatch(changeQtd({ id, qtd: - 1 }))}
-            }  /></i>
+            } /></i>
           </div>
         </div>
       </div>

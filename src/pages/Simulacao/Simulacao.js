@@ -19,8 +19,10 @@ const Simulacao = () => {
       <Header titleCategory='Simulação' description='A principal característica dos jogos de simulação é a de simular atividades da vida real, muitos desses jogos deixam você livre para explorar as principais mecânicas do game sem prender muito à missões ou história.' />
       <section>
         <div className={styles.container}>
-          {allItens?.map((item) => (
-            <CardDetail key={item.id} {...item} />
+          {allItens?.map(item => (
+            <div className={styles.effect}>
+              <CardDetail key={item.id} {...item} />
+            </div>
           ))}
         </div>
       </section>

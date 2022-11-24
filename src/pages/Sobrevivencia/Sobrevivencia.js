@@ -19,8 +19,10 @@ const Sobrevivencia = () => {
       <Header titleCategory='Sobrevivência' description='Jogo de sobrevivência é um subgênero de jogos eletrônicos de ação que geralmente libera o jogador com os mínimos recursos possíveis em um mapa de mundo aberto hostil.' />
       <section>
         <div className={styles.container}>
-          {allItens?.map((item) => (
-            <CardDetail key={item.id} {...item} />
+          {allItens?.map(item => (
+            <div className={styles.effect}>
+              <CardDetail key={item.id} {...item} />
+            </div>
           ))}
         </div>
       </section>

@@ -1,7 +1,18 @@
 .container {
-  margin: 30px 250px;
+  margin: 30px 200px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
+}
+
+.effect {
+  transition: 0.3s;
+}
+
+.container:has(.effect:hover) .effect:not(:hover) {
+  transition: 0.3s;
+  opacity: .8;
+  scale: .95;
 }

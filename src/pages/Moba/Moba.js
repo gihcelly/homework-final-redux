@@ -19,8 +19,10 @@ const Moba = () => {
       <Header titleCategory='MOBA' description='Um MOBA conta com dois times com cinco jogadores cada que se digladiam em um mapa simétrico até um dos lados conseguir destruir a base da equipe oponente.' />
       <section>
         <div className={styles.container}>
-          {allItens?.map((item) => (
-            <CardDetail key={item.id} {...item} />
+          {allItens?.map(item => (
+            <div className={styles.effect}>
+              <CardDetail key={item.id} {...item} />
+            </div>
           ))}
         </div>
       </section>

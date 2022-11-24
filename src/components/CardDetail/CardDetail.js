@@ -38,7 +38,7 @@ export default function CardDetail (props) {
               ? <AiFillHeart color='#ff0000' onClick={handleFavorite} />
               : <AiOutlineHeart onClick={handleFavorite} />
             }
-            <FaCartPlus color={inCart ? '#444' : '#000'} onClick={handleCart} /> 
+            <FaCartPlus color={inCart ? '#018a1a' : '#000'} onClick={handleCart} /> 
           </div>
         </div>
       </div>
