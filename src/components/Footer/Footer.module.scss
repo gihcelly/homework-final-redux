@@ -14,8 +14,22 @@
     color: #fff;
     font-size: 20px;
 
+    span {
+      strong {
+        a {
+          text-decoration: none;
+          color: #fff;
+          margin-left: 6px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
     & span:last-child {
-      font-weight: 600;
+      font-weight: 700;
     }
   }
 
@@ -26,7 +40,16 @@
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
-    cursor: pointer;
     color: #fff;
+
+    svg {
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+      }
+    }
   }
 }

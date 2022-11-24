@@ -8,7 +8,7 @@ import cartReducer from "./reducers/cartReducer";
 const store = configureStore({
 	reducer: {
 		categories: categoriesSlice,
-    	allItens: itens,
+    allItens: itens,
 		search: searchSlice,
 		cart: cartReducer
 	}

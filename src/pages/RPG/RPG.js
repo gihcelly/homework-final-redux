@@ -1,6 +1,8 @@
 import CardDetail from '../../components/CardDetail/CardDetail';
 import styles from './RPG.module.scss';
 
+import { useEffect } from 'react';
+
 import { Header } from '../../components/Header/Header';
 
 import { useLocation } from 'react-router-dom';
@@ -15,6 +17,10 @@ const RPG = () => {
       allItens: state.allItens.filter(item => item.category === pathname && item.titleCard.match(regexp))
     }
   });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   return (
     <>
@@ -22,7 +28,7 @@ const RPG = () => {
       <section>
         <div className={styles.container}>
           {allItens?.map(item => (
-            <div className={styles.effect}>
+            <div key={item.id} className={styles.effect}>
               <CardDetail key={item.id} {...item} />
             </div>
           ))}

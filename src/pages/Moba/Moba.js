@@ -1,16 +1,15 @@
 import CardDetail from '../../components/CardDetail/CardDetail';
 import styles from './Moba.module.scss';
 
+import { useEffect } from 'react';
+
 import { Header } from '../../components/Header/Header';
 
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-
 const Moba = () => {
-
   const { pathname } = useLocation();
-  
   const { allItens } = useSelector(state => {
     const regexp = new RegExp(state.search, 'i');
     return {
@@ -19,13 +18,17 @@ const Moba = () => {
     }
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Header titleCategory='MOBA' description='Um MOBA conta com dois times com cinco jogadores cada que se digladiam em um mapa simétrico até um dos lados conseguir destruir a base da equipe oponente.' />
       <section>
         <div className={styles.container}>
           {allItens?.map(item => (
-            <div className={styles.effect}>
+            <div key={item.id} className={styles.effect}>
               <CardDetail key={item.id} {...item} />
             </div>
           ))}

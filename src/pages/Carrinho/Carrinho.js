@@ -1,9 +1,12 @@
 import styles from "./Carrinho.module.scss";
+
+import { useEffect } from "react";
+
 import { Header } from "../../components/Header/Header";
+import CardCarrinho from "../../components/CardCarrinho/CardCarrinho";
+
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
-import CardCarrinho from "../../components/CardCarrinho/CardCarrinho";
 
 const Carrinho = () => {
 	const { cart, totalPrice } = useSelector(state => {
@@ -26,21 +29,19 @@ const Carrinho = () => {
 		}
 	})
 
+	useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 	return (
 		<>
-			<Header
-				titleCategory={"Finalize sua compra agora!"}
-				description={"Todos os jogos com 10% de desconto"}
-			/>
+			<Header titleCategory="Itens no carrinho" description="Todos os jogos com 10% de desconto" />
 			<div className={styles.container}>
 				{cart.map((item) => <CardCarrinho key={item.id} {...item} />)}	
 				<div className={styles.item2}>
 					<div className={styles.divResumo}>
-						<span className={`${styles.bold} ${styles.first}`}><Link to={'/finalizar-compra'}>Ver carrinho de compras</Link></span>
-						<div>
-							<span>Subtotal: </span>
-							<span className={styles.bold}>R$ {totalPrice.toFixed(2)}</span>
-						</div>
+						<span className={`${styles.bold} ${styles.first}`}><Link to={'/finalizar-compra'}>Finalizar pedido</Link></span>
+						<div><span>Subtotal: <strong>R$ {totalPrice.toFixed(2)}</strong></span></div>
 					</div>
 				</div>
 			</div>

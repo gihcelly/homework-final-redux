@@ -1,3 +1,7 @@
+section {
+  min-height: calc(100vh - 595px);
+}
+
 .container {
   margin: 30px 200px;
   display: flex;

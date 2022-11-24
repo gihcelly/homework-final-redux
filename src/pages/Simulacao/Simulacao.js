@@ -1,6 +1,8 @@
 import CardDetail from '../../components/CardDetail/CardDetail';
 import styles from './Simulacao.module.scss';
 
+import { useEffect } from 'react';
+
 import { Header } from '../../components/Header/Header';
 
 import { useLocation } from 'react-router-dom';
@@ -16,13 +18,17 @@ const Simulacao = () => {
     }
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Header titleCategory='Simulação' description='A principal característica dos jogos de simulação é a de simular atividades da vida real, muitos desses jogos deixam você livre para explorar as principais mecânicas do game sem prender muito à missões ou história.' />
       <section>
         <div className={styles.container}>
           {allItens?.map(item => (
-            <div className={styles.effect}>
+            <div key={item.id} className={styles.effect}>
               <CardDetail key={item.id} {...item} />
             </div>
           ))}

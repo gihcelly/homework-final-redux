@@ -9,6 +9,14 @@
 - ### `npm i`
 - ### `npm start`
 
+## Tecnologias usadas:
+- ReactJS - JavaScript Template
+- React Redux
+- React Router Dom
+- React Icons
+- SASS
+- UUID
+
 ## Documentação do projeto:
 
 ### Etapa 01
@@ -23,3 +31,8 @@
 ### Etapa 02
 - Aqui começamos a utilizar o Redux, criando dois reducers para os cards da página Home e das páginas de categorias, esses reducers deixam os cards dinâmicos, agora podemos gerenciar os estados desses components e adicionar lógica a eles.
 - Foi adicionado a feature de favoritar um item.
+
+### Etapa Final
+- Feature de buscar um item dentro de uma categoria, do carrinho ou na página de finalizar compra.
+- Feature que lista os itens no carrinho com preço e quantidade, preço é alterado de acordo com a quantidade selecionada.
+- Adicionado vários detalhes ao layout se comparado com a primeira etapa.
