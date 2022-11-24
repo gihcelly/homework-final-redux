@@ -1,8 +1,20 @@
+@import '../../breakpoint/breakpoint.scss';
+
 .container {
   max-width: 100%;
   min-height: 23.5vh;
   display: flex;
   flex-direction: column;
+
+  @media(max-width: $tablet) {
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media(max-width: $mobile-sm) {
+    align-items: center;
+    justify-content: center;
+  }
 
   .item2 {
     display: flex;
@@ -21,6 +33,23 @@
       padding: 10px 20px;
       border-radius: 5px;
       color: white;
+      flex-wrap: wrap;
+
+      @media(max-width: $tablet) {
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 70%;
+        height: 20%;
+      }
+
+      @media(max-width: $mobile-sm) {
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 70%;
+        height: 20%;
+      }
 
       a {
         color: #fff;

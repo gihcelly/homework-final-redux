@@ -1,8 +1,20 @@
+@import '../../breakpoint/breakpoint.scss';
+
 .container {
   max-width: 100%;
   min-height: calc(100vh - 145px);
   display: flex;
   flex-direction: column;
+
+  @media(max-width: $tablet) {
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media(max-width: $mobile-sm) {
+    align-items: center;
+    justify-content: center;
+  }
 
   h1 {
     text-align: center;
@@ -19,12 +31,29 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 50px;
+      flex-wrap: wrap;
+      height: 40px;
       width: 40%;
       background-color: #4b3f4e;
       padding: 10px 20px;
       color: white;
       border-radius: 5px;
+
+      @media(max-width: $tablet) {
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 60%;
+        height: 20%;
+      }
+
+      @media(max-width: $mobile-sm) {
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 60%;
+        height: 20%;
+      }
     }
 
     button {
