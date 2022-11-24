@@ -6,11 +6,16 @@ import { Header } from '../../components/Header/Header';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
+
 const Moba = () => {
+
   const { pathname } = useLocation();
+  
   const { allItens } = useSelector(state => {
+    const regexp = new RegExp(state.search, 'i');
     return {
-      allItens: state.allItens.filter(item => item.category === pathname)
+      category: state.categories.find(category  => category.id === pathname),
+      allItens: state.allItens.filter(item => item.category === pathname && item.titleCard.match(regexp))
     }
   });
 

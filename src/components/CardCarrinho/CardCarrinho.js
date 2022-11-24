@@ -1,4 +1,4 @@
-import styles from './CardCarrinho.module.scss';
+import styles from "./CardCarrinho.module.scss";
 
 import { changeFavorite } from '../../app/reducers/cardDetail';
 import { changeQtd, changeCart } from '../../app/reducers/cartReducer';
@@ -41,10 +41,40 @@ const CardCarrinho = (props) => {
               dispatch(changeQtd({ id, qtd: - 1 }))}
             } /></i>
           </div>
-        </div>
-      </div>
-    </>
-  )
-}
+          
+				</div>
+				<div className={styles.cardActions}>
+					<span>Quantidade:</span>
+					{pathname == "/carrinho" ? (
+						<div>
+							<i>
+								<CiSquarePlus
+									size={30}
+									onClick={() => {
+										dispatch(changeQtd({ id, qtd: +1 }));
+									}}
+								/>
+							</i>
+							<span>{String(qtd || 0).padStart(2, "0")}</span>
+							<i>
+								<CiSquareMinus
+									size={30}
+									onClick={() => {
+										if (qtd === 1) return;
+										dispatch(changeQtd({ id, qtd: -1 }));
+									}}
+								/>
+							</i>
+						</div>
+					) : (
+						<div className={styles.qtd}>
+							<span>{String(qtd || 0).padStart(2, "0")}</span>
+						</div>
+					)}
+				</div>
+			</div>
+		</>
+	);
+};
 
-export default CardCarrinho
+export default CardCarrinho;
