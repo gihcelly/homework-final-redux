@@ -36,3 +36,4 @@
 - Feature de buscar um item dentro de uma categoria, do carrinho ou na página de finalizar compra.
 - Feature que lista os itens no carrinho com preço e quantidade, preço é alterado de acordo com a quantidade selecionada.
 - Adicionado vários detalhes ao layout se comparado com a primeira etapa.
+- Layout responsivo.
